@@ -6,7 +6,7 @@ This project required the modification of, and addition to, JavaScript starter c
 
 ## How to Run
 Go to site: 
-!!!!!Add deployed URL address
+https://smariagomez.github.io/password-generator/
 
 ## How to Use
 
