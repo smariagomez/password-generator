@@ -59,13 +59,17 @@ function generatePassword() {
         console.log(availableCharacters = availableCharacters += lowercaseLetters);
     }
 //Alert and prompt need to be added to alert user if they have not selected any of the preceding character options and than try to decline lowercase.
-
-    var answer = ""
+        console.log(availableCharacters)
+       
+    //var answer = ""
     for (var i = 0; i < lengthUI; i++) {
         password += availableCharacters[Math.floor(Math.random() * availableCharacters.length)];
         console.log(password);
     }
-
+    if(availableCharacters.length===0){
+        password="";
+        alert("You must select at least one character type")
+    }
     //getParameters();
     //2. create random password from available characters
 
