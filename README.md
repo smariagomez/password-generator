@@ -16,6 +16,6 @@ First, the user opens browser to the deployed site. By clicking on the red "Gene
 
 ## Known Bugs
 
-If the desired length of characters is left blank or if there is a non-numerical entry, a password will not be generated but it will not alert the user what mistake was made. Currently, the user can proceed through the entire prompt/confirm sequence without selecting any of the character options at which point the password window will read as "undefined." An alert and repeat confirm windows need to added so that the user is forced to select at least one character option for their password.
+If the desired length of characters is left blank or if there is a non-numerical entry, a password will not be generated but it will not alert the user what mistake was made.
 
 
