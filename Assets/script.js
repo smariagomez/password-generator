@@ -5,7 +5,6 @@ var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
 
 //updated based on user's selection
-//var length;
 var availableCharacters = [];
 var numbers = "0123456789";
 var special = "~!@#$%^&*(<>";
@@ -18,15 +17,16 @@ function generatePassword() {
     //1. prompt user for parameters
     //Prompt for length
     var lengthUI = prompt("Type the number of characters you would like your password to contain. Minimum of 8 characters required and a maximum of 128 characters");
-
-    if (lengthUI < 8 || lengthUI > 128) {
+//Edit code to ensure that entry is present and numerical.
+    if (lengthUI < 8  || lengthUI > 128) {
         alert("The number you typed was not within the the defined parameters of 8-128 characters");
-        prompt("Type the number of characters you would like in your password. Number must be within the range of 8-128")
+        prompt("Type the number of characters you would like in your password. Number must be a minimum of 8 and no more than 128 characters")
     } else if (lengthUI >= 8 || lengthUI <= 128) {
         alert("You may move onto the next prompt");
     }
 
     console.log(lengthUI)
+
     //Prompt for special characters
     var specialUI = confirm("Click ok if you need special characters")
     console.log(specialUI)
@@ -58,18 +58,17 @@ function generatePassword() {
     if (lowercaseLettersUI) {
         console.log(availableCharacters = availableCharacters += lowercaseLetters);
     }
+//Alert and prompt need to be added to alert user if they have not selected any of the preceding character options and than try to decline lowercase.
 
+    var answer = ""
     for (var i = 0; i < lengthUI; i++) {
-        password = availableCharacters[Math.floor(Math.random()*availableCharacters.length)]
+        password += availableCharacters[Math.floor(Math.random() * availableCharacters.length)];
+        console.log(password);
     }
-    //getParameters()
+
+    //getParameters();
     //2. create random password from available characters
-    //for loop run the number of times that the user sets length to 
-    //add random characters to password string
-    //Math.floor(Math.random(availableCharacters)*length.length)
-    //for (i=0; i<=length.length; i++) {
-    //console.log(i)
-    //}
+
     //add 1 random character to password
 
     return password
